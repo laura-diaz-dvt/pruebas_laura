@@ -70,24 +70,24 @@ view: order_items_extended {
     kind: previous
   }
 
-  # measure: sales_last_year_yes {
-  #   type: period_over_period
-  #   description: "Sales from the previous year"
-  #   based_on: order_items_extended.sale_price
-  #   based_on_time: order_items_extended.created_year
-  #   period: year
-  #   kind: previous
-  #   value_to_date: yes
-  # }
+  measure: sales_last_year_yes {
+    type: period_over_period
+    description: "Sales from the previous year"
+    based_on: order_items_extended.sum_sales
+    based_on_time: order_items_extended.created_year
+    period: year
+    kind: previous
+    value_to_date: yes
+  }
 
-  # measure: sales_last_year_no {
-  #   type: period_over_period
-  #   description: "Sales from the previous year"
-  #   based_on: order_items_extended.sum_sales
-  #   based_on_time: order_items_extended.created_year
-  #   period: year
-  #   kind: previous
-  #   value_to_date: yes
-  # }
+  measure: sales_last_year_no {
+    type: period_over_period
+    description: "Sales from the previous year"
+    based_on: order_items_extended.sum_sales
+    based_on_time: order_items_extended.created_year
+    period: year
+    kind: previous
+    value_to_date: no
+  }
 
 }
