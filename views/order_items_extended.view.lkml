@@ -70,6 +70,7 @@ view: order_items_extended {
     kind: previous
   }
 
+
   measure: sales_last_year_yes {
     type: period_over_period
     description: "Sales from the previous year"
