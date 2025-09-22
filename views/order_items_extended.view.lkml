@@ -10,7 +10,7 @@ view: order_items_extended {
   dimension_group: created {
     type: time
     timeframes: [raw, time, date, week, month, quarter, year]
-    sql: ${TABLE}.created_ats ;;
+    sql: ${TABLE}.created_a ;;
   }
   dimension_group: delivered {
     type: time

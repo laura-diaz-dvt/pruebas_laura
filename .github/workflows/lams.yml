@@ -24,3 +24,19 @@ jobs:
       run: npm install -g @looker/look-at-me-sideways@3
     - name: Run LAMS
       run: lams --reporting=no
+    - name: Install Spectacles
+      run: pip install spectacles
+    - name: Run Spectacles Tests
+      run: |
+        spectacles connect \
+          --base-url ${{ secrets.LOOKER_BASE_URL }} \
+          --client-id ${{ secrets.LOOKER_CLIENT_ID }} \
+          --client-secret ${{ secrets.LOOKER_CLIENT_SECRET }}
+
+        spectacles sql \
+          --project your_looker_project \
+          --branch ${{ github.head_ref }} \
+          --remote-branch main \
+          --base-url ${{ secrets.LOOKER_BASE_URL }} \
+          --client-id ${{ secrets.LOOKER_CLIENT_ID }} \
+          --client-secret ${{ secrets.LOOKER_CLIENT_SECRET }}
