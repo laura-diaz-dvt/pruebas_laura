@@ -20,10 +20,6 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '16.x'
-    - name: Install LAMS
-      run: npm install -g @looker/look-at-me-sideways@3
-    - name: Run LAMS
-      run: lams --reporting=no
     - name: Install Spectacles
       run: pip install spectacles
     - name: Run Spectacles Tests
@@ -36,7 +32,10 @@ jobs:
         spectacles sql \
           --project pruebas_laura \
           --branch ${{ github.head_ref }} \
-          --remote-branch main \
-          --base-url nubalia.cloud.looker.com \
+          --base-url https://nubalia.cloud.looker.com \
           --client-id 3YwXp8CmR8ZmgwTQg9C2 \
           --client-secret jMG5Y9CmT7ZDPRDYSnPTdjmF
+    - name: Install LAMS
+      run: npm install -g @looker/look-at-me-sideways@3
+    - name: Run LAMS
+      run: lams --reporting=no
