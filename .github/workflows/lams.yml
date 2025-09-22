@@ -31,7 +31,6 @@ jobs:
 
         spectacles sql \
           --project pruebas_laura \
-          --branch ${{ github.head_ref }} \
           --base-url https://nubalia.cloud.looker.com \
           --client-id 3YwXp8CmR8ZmgwTQg9C2 \
           --client-secret jMG5Y9CmT7ZDPRDYSnPTdjmF
