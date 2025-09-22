@@ -29,14 +29,14 @@ jobs:
     - name: Run Spectacles Tests
       run: |
         spectacles connect \
-          --base-url ${{ secrets.LOOKER_BASE_URL }} \
-          --client-id ${{ secrets.LOOKER_CLIENT_ID }} \
-          --client-secret ${{ secrets.LOOKER_CLIENT_SECRET }}
+          --base-url https://nubalia.cloud.looker.com \
+          --client-id 3YwXp8CmR8ZmgwTQg9C2 \
+          --client-secret jMG5Y9CmT7ZDPRDYSnPTdjmF
 
         spectacles sql \
-          --project your_looker_project \
+          --project pruebas_laura \
           --branch ${{ github.head_ref }} \
           --remote-branch main \
-          --base-url ${{ secrets.LOOKER_BASE_URL }} \
-          --client-id ${{ secrets.LOOKER_CLIENT_ID }} \
-          --client-secret ${{ secrets.LOOKER_CLIENT_SECRET }}
+          --base-url nubalia.cloud.looker.com \
+          --client-id 3YwXp8CmR8ZmgwTQg9C2 \
+          --client-secret jMG5Y9CmT7ZDPRDYSnPTdjmF
