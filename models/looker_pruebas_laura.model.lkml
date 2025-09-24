@@ -10,5 +10,5 @@ include: "/views/*.view.lkml"                # include all views in the views/ f
 explore: order_items {}
 
 explore: order_items_extended {
-  always_filter: {filters:[ order_items_extended.returned_year: "2022"]}
+  # always_filter: {filters:[ order_items_extended.returned_year: "2022"]}
 }
