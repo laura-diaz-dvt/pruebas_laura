@@ -91,4 +91,11 @@ view: order_items_extended {
     value_to_date: no
   }
 
+  dimension: status_completed {
+    type: yesno
+    sql: CASE WHEN ${TABLE}.status = 'completed' THEN TRUE ELSE FALSE END ;;
+    description: "TRUE si el status es completed"
+    can_filter: yes
+  }
+
 }
