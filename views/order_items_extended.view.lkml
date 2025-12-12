@@ -101,8 +101,19 @@ view: order_items_extended {
     sql: (Select 'Descargar') ;;
     link: {
       label: "Detalle "
-      url: "/dashboards/349?Status={{ _filters['order_items_extended.status'] | url_encode }}"
+      url: "/dashboards/357?Status={{ _filters['order_items_extended.status'] | url_encode }}"
     }
+  }
+  measure: perc_n_contracts_vo_vs_obj {
+    type: number
+    sql: ${sum_sales} ;;
+    value_format_name: "percent_2"
+
+    html:
+    <div title="N Contracts VO vs OBJ %: {{ rendered_value }}">
+      {{ rendered_value }}
+    </div>
+  ;;
   }
 
   # measure: objetivo_avg_ind_1 {
