@@ -96,25 +96,16 @@ view: order_items_extended {
     description: "Filtra por status del pedido"
   }
 
-  # dimension: descargar {
-  #   type: string
-  #   sql: (Select 'Test 2') ;;
-  #   link: {
-  #     label: "Test 2 "
-  #     url: "/dashboards/357?Status={{ _filters['order_items_extended.status'] | url_encode }}"
-  #   }
-  #   link: {
-  #     label: "Test 1 "
-  #     url: "/dashboards/356?Status={{ _filters['order_items_extended.status'] | url_encode }}"
-  #   }
-  # }
-
   dimension: descargar {
     type: string
     sql: (Select 'Test 2') ;;
     link: {
-      label: "Test 2"
-      url: "/test3.html?target=https://nubalia.cloud.looker.com/dashboards/357?Status={{ _filters['order_items_extended.status'] | url_encode }}"
+      label: "Test 2 "
+      url: "/embed/dashboards/357?Status={{ _filters['order_items_extended.status'] | url_encode }}"
+    }
+    link: {
+      label: "Test 1 "
+      url: "/embed/dashboards/356?Status={{ _filters['order_items_extended.status'] | url_encode }}"
     }
   }
 
