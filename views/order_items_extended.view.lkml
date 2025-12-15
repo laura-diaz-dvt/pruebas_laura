@@ -98,10 +98,14 @@ view: order_items_extended {
 
   dimension: descargar {
     type: string
-    sql: (Select 'Descargar') ;;
+    sql: (Select 'Test 2') ;;
     link: {
-      label: "Detalle "
+      label: "Test 2 "
       url: "/dashboards/357?Status={{ _filters['order_items_extended.status'] | url_encode }}"
+    }
+    link: {
+      label: "Test 1 "
+      url: "/dashboards/356?Status={{ _filters['order_items_extended.status'] | url_encode }}"
     }
   }
   measure: perc_n_contracts_vo_vs_obj {
