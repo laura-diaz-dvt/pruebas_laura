@@ -99,15 +99,15 @@ view: order_items_extended {
   dimension: link_test_2 {
     type: string
     sql: (Select 'Test 2') ;;
-    # link: {
-    #   label: "Test 2 "
-    #   url: "/embed/dashboards/357?Status={{ _filters['order_items_extended.status'] | url_encode }}"
-    # }
+    link: {
+      label: "Test 2 "
+      url: "/embed/dashboards/357?Status={{ _filters['order_items_extended.status'] | url_encode }}"
+    }
     # link: {
     #   label: "Test 1 "
     #   url: "/embed/dashboards/356?Status={{ _filters['order_items_extended.status'] | url_encode }}"
     # }
-    html: <a href="/dashboards/357?Status={{ _filters['order_items_extended.status'] | url_encode}}" target="_blank" > 📊 {{rendered_value}} </a>;;
+    # html: <a href="/dashboards/357?Status={{ _filters['order_items_extended.status'] | url_encode}}" target="_blank" > 📊 {{rendered_value}} </a>;;
   }
   dimension: link_test_1 {
     type: string
