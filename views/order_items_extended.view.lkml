@@ -96,17 +96,23 @@ view: order_items_extended {
     description: "Filtra por status del pedido"
   }
 
-  dimension: descargar {
+  dimension: link_test_2 {
     type: string
     sql: (Select 'Test 2') ;;
-    link: {
-      label: "Test 2 "
-      url: "/embed/dashboards/357?Status={{ _filters['order_items_extended.status'] | url_encode }}"
-    }
-    link: {
-      label: "Test 1 "
-      url: "/embed/dashboards/356?Status={{ _filters['order_items_extended.status'] | url_encode }}"
-    }
+    # link: {
+    #   label: "Test 2 "
+    #   url: "/embed/dashboards/357?Status={{ _filters['order_items_extended.status'] | url_encode }}"
+    # }
+    # link: {
+    #   label: "Test 1 "
+    #   url: "/embed/dashboards/356?Status={{ _filters['order_items_extended.status'] | url_encode }}"
+    # }
+    html: <a href="/dashboards/357?Status={{ _filters['order_items_extended.status'] | url_encode}}" target="_blank" > 📊 {{rendered_value}} </a>;;
+  }
+  dimension: link_test_1 {
+    type: string
+    sql: (Select 'Test 1') ;;
+    html: <a href="/dashboards/356?Status={{ _filters['order_items_extended.status'] | url_encode}}" target="_blank" > 📊 {{rendered_value}} </a>;;
   }
 
   measure: perc_n_contracts_vo_vs_obj {
