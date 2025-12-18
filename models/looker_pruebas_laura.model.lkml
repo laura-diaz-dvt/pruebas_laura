@@ -5,7 +5,7 @@ include: "/views/*.view.lkml"                # include all views
 explore: order_items {}
 
 explore: order_items_extended {
-  # blocks the explore if the user does not have the permission
+  # blocks the explore if the user does not have the permission, the value of the user attribute must match
   required_access_grants: [test_grant]
 
   # filters data according to the user's attribute
