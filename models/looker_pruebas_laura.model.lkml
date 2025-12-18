@@ -5,19 +5,19 @@ include: "/views/*.view.lkml"                # include all views
 explore: order_items {}
 
 explore: order_items_extended {
-  # bloquea completamente el explore si el usuario no tiene el permiso
+  # blocks the explore if the user does not have the permission
   required_access_grants: [test_grant]
 
-  # filtra datos según el atributo del usuario
+  # filters data according to the user's attribute
   access_filter: {
     field: order_items_extended.status
     user_attribute: test_status
   }
 
-  # filtra los datos a todos los usuarios por una dimension
+  # filters data for all users by a dimension
   # sql_always_where: ${order_items_extended.status} != 'cancelled' ;;
 
-  # filtra los datos a todos los usuarios por una medida
+  # filters data for all users by a measure
   # sql_always_having: ${order_items_extended.count} > 1000 ;;
 }
 
