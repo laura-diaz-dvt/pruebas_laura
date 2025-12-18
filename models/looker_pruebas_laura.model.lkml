@@ -1,19 +1,27 @@
 connection: "laura-diaz-sandbox-01"
 
-include: "/views/*.view.lkml"                # include all views in the views/ folder in this project
-# include: "/**/*.view.lkml"                 # include all views in this project
-# include: "my_dashboard.dashboard.lookml"   # include a LookML dashboard called my_dashboard
+include: "/views/*.view.lkml"                # include all views
 
-# # Select the views that should be a part of this model,
-# # and define the joins that connect them together.
-#
 explore: order_items {}
 
 explore: order_items_extended {
+  # bloquea completamente el explore si el usuario no tiene el permiso
+  required_access_grants: [test_grant]
+
+  # filtra datos según el atributo del usuario
   access_filter: {
     field: order_items_extended.status
     user_attribute: test_status
   }
-  # always_filter: {filters:[ order_items_extended.returned_year: "2022"]}
+
+  # filtra los datos a todos los usuarios por una dimension
+  # sql_always_where: ${order_items_extended.status} != 'cancelled' ;;
+
+  # filtra los datos a todos los usuarios por una medida
+  # sql_always_having: ${order_items_extended.count} > 1000 ;;
 }
-# explore:extend_prueba {}
+
+access_grant: test_grant {
+  user_attribute: test_grant
+  allowed_values: ["yes"]
+}
