@@ -46,6 +46,7 @@ view: order_items_extended {
   dimension: status {
     type: string
     sql: ${TABLE}.status ;;
+    required_access_grants: [can_see_status]
   }
   dimension: user_id {
     type: number

@@ -25,3 +25,8 @@ access_grant: test_grant {
   user_attribute: test_grant
   allowed_values: ["yes"]
 }
+
+access_grant: can_see_status {
+  user_attribute: status_filter
+  allowed_values: ["yes"]
+}
