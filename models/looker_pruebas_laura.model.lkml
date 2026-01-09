@@ -30,3 +30,8 @@ access_grant: can_see_status {
   user_attribute: status_filter
   allowed_values: ["yes"]
 }
+
+access_grant: 2_only {
+  user_attribute: region
+  allowed_values: ["es"]
+}
