@@ -1,6 +1,11 @@
 view: order_items_extended {
   # sql_table_name: `laura-diaz-sandbox-01.looker.order_items_extended` ;;
-  sql_table_name: laura-diaz-sandbox-01.{% if _user_attributes['region'] == 'es' %}looker{% else %}looker2{% endif %}.order_items_extended;;
+  sql_table_name: laura-diaz-sandbox-01.
+  {% if _user_attributes['region'] == '1' %}looker
+  {% elsif _user_attributes['region'] == '2' %}looker2
+  {% elsif _user_attributes['region'] == '3' %}looker3
+  {% endif %}.order_items_extended;;
+  # {% else %}looker3{% endif %}.order_items_extended;;
   drill_fields: [id]
 
   dimension: id {
