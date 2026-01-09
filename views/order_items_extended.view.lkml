@@ -1,5 +1,6 @@
 view: order_items_extended {
-  sql_table_name: `laura-diaz-sandbox-01.looker.order_items_extended` ;;
+  # sql_table_name: `laura-diaz-sandbox-01.looker.order_items_extended` ;;
+  sql_table_name: laura-diaz-sandbox-01.{% if _user_attributes['locale'] == 'en' %}looker{% else %}looker2{% endif %}.order_items_extended;;
   drill_fields: [id]
 
   dimension: id {
@@ -52,6 +53,12 @@ view: order_items_extended {
     type: number
     sql: ${TABLE}.user_id ;;
   }
+
+  dimension: dataset {
+    type: string
+    sql: ${TABLE}.dataset ;;
+  }
+
   measure: count {
     type: count
     drill_fields: [id]
