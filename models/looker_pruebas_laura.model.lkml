@@ -21,6 +21,14 @@ explore: order_items_extended {
   # sql_always_having: ${order_items_extended.count} > 1000 ;;
 }
 
+explore: +order_items {
+  join: order_items_extended {
+    type: left_outer
+    relationship: one_to_one
+    sql_on: ${order_items.product_id} = ${order_items_extended.product_id} ;;
+  }
+}
+
 access_grant: test_grant {
   user_attribute: test_grant
   allowed_values: ["yes"]
