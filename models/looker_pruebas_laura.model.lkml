@@ -3,7 +3,7 @@ connection: "laura-diaz-sandbox-01"
 include: "/views/*.view.lkml"                # include all views
 
 explore: order_items {}
- #laura
+#laura
 explore: order_items_extended {
   # blocks the explore if the user does not have the permission, the value of the user attribute must match
   required_access_grants: [test_grant]
@@ -28,6 +28,7 @@ explore: +order_items {
     sql_on: ${order_items.product_id} = ${order_items_extended.product_id} ;;
   }
 }
+
 
 access_grant: test_grant {
   user_attribute: test_grant
