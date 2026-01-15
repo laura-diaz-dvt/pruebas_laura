@@ -9,8 +9,8 @@
   elements:
   - title: test
     name: test
-    # model: carlos-training-looker
-    model: _user_attributes['modelo']
+    model: carlos-training-looker
+    # model: _user_attributes['modelo']
     explore: order_items
     type: looker_grid
     fields: [users.count, users.age]
