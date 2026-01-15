@@ -1,14 +1,14 @@
 ---
-- dashboard: test_lookml
-  title: test_lookml
+- dashboard: test
+  title: test
   layout: newspaper
   preferred_viewer: dashboards-next
   description: ''
   preferred_slug: ImGzh8jH2vmdNenAHIygsY
   theme_name: ''
   elements:
-  - title: test_lookml
-    name: test_lookml
+  - title: test
+    name: test
     # model: carlos-training-looker
     model: _user_attributes['modelo']
     explore: order_items
