@@ -4,7 +4,7 @@
   layout: newspaper
   preferred_viewer: dashboards-next
   description: ''
-  preferred_slug: ImGzh8jH2vmdNenAHIygsY
+  preferred_slug: ImGzh8jH2vmdNenAHIygsYh
   theme_name: ''
   elements:
   - title: test
