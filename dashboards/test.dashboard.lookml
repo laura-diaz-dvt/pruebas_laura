@@ -9,7 +9,7 @@
   elements:
   - title: Untitled
     name: Untitled
-    model: _user_attributes['modelo']
+    model: looker_pruebas_laura
     explore: order_items_extended
     type: looker_grid
     fields: [order_items_extended.product_id, order_items_extended.status, order_items_extended.sum_sales,
