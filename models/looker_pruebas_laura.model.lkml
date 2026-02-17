@@ -2,10 +2,14 @@ connection: "laura-diaz-sandbox-01"
 
 include: "/views/*.view.lkml"                # include all views
 include: "/dashboards/*.dashboard.lookml"
+
 # include: "//laura_dev/dashboards/*.dashboard.lookml"
+# include: "//laura_dev2/views/*.view.lkml"
+
+# explore: events {}
 
 explore: order_items {}
-#laura
+
 explore: order_items_extended {
   # blocks the explore if the user does not have the permission, the value of the user attribute must match
   required_access_grants: [test_grant]

@@ -1,8 +1,8 @@
 project_name: "pruebas_laura"
 
-remote_dependency: laura_dev {
-  url: "https://github.com/laura-diaz-dvt/laura_dev.git"
+remote_dependency: laura_dev2 {
+  url: "https://github.com/laura-diaz-dvt/laura_dev2.git"
   # ref: "v1.1.1"
-  ref: "master"
-  # ref: "fa06193b9ae5ec51687ac11326f37f4d348d3f29"
+  # ref: "master"
+  ref: "73cac06d556eb122689e92e9ef6797442fa424d4"
 }
