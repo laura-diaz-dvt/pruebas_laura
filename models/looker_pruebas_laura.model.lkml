@@ -2,6 +2,7 @@ connection: "laura-diaz-sandbox-01"
 
 include: "/views/*.view.lkml"                # include all views
 include: "/dashboards/*.dashboard.lookml"
+# include: "//laura_dev/dashboards/*.dashboard.lookml"
 
 explore: order_items {}
 #laura
