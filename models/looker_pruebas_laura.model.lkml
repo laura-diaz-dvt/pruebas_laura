@@ -2,6 +2,8 @@ connection: "laura-diaz-sandbox-01"
 
 include: "/views/*.view.lkml"                # include all views
 include: "/dashboards/*.dashboard.lookml"
+include: "//laura_dev/*/*.dashboard"
+
 
 # include: "//laura_dev/dashboards/*.dashboard.lookml"
 # include: "//laura_dev2/views/*.view.lkml"

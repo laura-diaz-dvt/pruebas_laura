@@ -1,4 +1,4 @@
-remote_dependency: laura_dev2 {
-  url: "https://github.com/laura-diaz-dvt/laura_dev2.git"
-  ref: "73cac06d556eb122689e92e9ef6797442fa424d4"
+remote_dependency: laura_dev {
+  url: "https://github.com/laura-diaz-dvt/laura_dev.git"
+  ref: "b2ef0a9e17db55bf87916076d0b8921fd25aa82f"
 }
